@@ -35,7 +35,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IO-3h-hBG">
-                                <rect key="frame" x="160.66666666666666" y="302" width="93" height="70"/>
+                                <rect key="frame" x="161" y="302" width="93" height="70"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="dTJ-vb-JQ0"/>
@@ -52,6 +52,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass Data Project " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amT-kc-zTK">
                                 <rect key="frame" x="48" y="28" width="318" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abZ-Gf-igy">
+                                <rect key="frame" x="149" y="517" width="117" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -76,12 +83,13 @@
                     <connections>
                         <outlet property="loginTextField" destination="CSd-T6-oeG" id="rai-7v-Uja"/>
                         <outlet property="passworldTextField" destination="nIc-vy-0CK" id="qUG-eA-efS"/>
+                        <outlet property="returnLabel" destination="abZ-Gf-igy" id="D6z-Iu-Bky"/>
                         <segue destination="i9N-1f-HD0" kind="show" identifier="detailSegue" id="rxw-0D-v2W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-48" y="-309"/>
+            <point key="canvasLocation" x="-49.275362318840585" y="-309.78260869565219"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="aAZ-dj-909">
@@ -118,8 +126,7 @@
                                     <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendPressed:" destination="i9N-1f-HD0" eventType="touchUpInside" id="bvs-4a-IOs"/>
-                                    <action selector="sendPressedWithButton:" destination="i9N-1f-HD0" eventType="touchUpInside" id="voT-L8-8IH"/>
+                                    <action selector="sendPressedWithButton:" destination="i9N-1f-HD0" eventType="touchUpInside" id="yca-oc-iHT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -136,9 +143,11 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="VL5-e0-OdD" id="egl-md-AeZ"/>
+                        <segue destination="caN-fg-Bnv" kind="unwind" identifier="unwinSegue" unwindAction="uwindToMainScreenWithSegue:" id="VPP-lz-h7l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xTo-Gn-VAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="caN-fg-Bnv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="774" y="-310"/>
         </scene>

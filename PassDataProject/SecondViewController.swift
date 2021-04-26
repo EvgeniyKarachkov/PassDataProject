@@ -16,6 +16,7 @@ class SecondViewController: UIViewController {
     
     
     @IBAction func sendPressed(button: UIButton) {
+        performSegue(withIdentifier: "uwindSegue", sender: nil)
     }
     
     override func viewDidLoad() {
